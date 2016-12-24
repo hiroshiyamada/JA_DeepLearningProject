@@ -1,0 +1,24 @@
+#include <opencv2/opencv.hpp>
+#include <string>
+#include <sstream>
+#include <cstdio>
+#include <iomanip>
+
+using namespace std;
+using namespace cv;
+#define ATTRIBUTES 64
+#define CLASSES 6
+//話ごとに添字を変える
+int imagenum=0;
+void detectAndDisplay(Mat image);
+
+CascadeClassifier face_cascade;
+
+//XMLを読み込んでニューラルネットワークの構築
+CvANN_MLP nnetwork;
+CvFileStorage* storage;
+CvFileNode *n;
+VideoWriter output;
+
+int main(int argc, char* argv[]){
+}
